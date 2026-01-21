@@ -98,14 +98,14 @@ The chatbot should gracefully handle:
 ## Deliverables
 
 1. Working chatbot code
-2. README with setup instructions
-3. Sample conversation demonstrating various question types
+2. A simple UI interface for interacting with the chatbot
+3. README with setup instructions
+4. Sample conversation demonstrating various question types
 
 ## Reference Files
 
 - Data: `data/d0_dplus_daily_summary/d0_dplus_daily_summary.json`
 - Schema: `schemas/d0_dplus_daily_summary.schema`
-- Unique Values: `data/d0_dplus_daily_summary/unique_values.json`
 
 ## Evaluation Criteria
 
