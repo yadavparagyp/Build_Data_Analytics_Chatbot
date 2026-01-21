@@ -1,0 +1,32 @@
+# BigQuery Table Schema
+# Table: lookup_tables.d0_dplus_daily_summary
+
+| Column Name | Type | Mode | Description |
+|-------------|------|------|-------------|
+| date | DATE | NULLABLE | The reporting date for the metrics |
+| gender | STRING | NULLABLE | Gender of the user (Male/Female/Other) |
+| platform | STRING | NULLABLE | Platform used by the user (web/app) |
+| city | STRING | NULLABLE | City of the user (Indian City) |
+| first_form_utm_medium | STRING | NULLABLE | UTM medium parameter captured at the time of first form submission |
+| first_form_utm_campaign | STRING | NULLABLE | UTM campaign parameter captured at the time of first form submission |
+| first_form_utm_source | STRING | NULLABLE | UTM source parameter captured at the time of first form submission |
+| stage | STRING | NULLABLE | Stage of hair loss reported by the user |
+| total_form_start | FLOAT | NULLABLE | Total number of people who initiated form fillup on the date |
+| d0_form_start | FLOAT | NULLABLE | Number of people who signed up and initiated form fillup on the given date |
+| total_form_filled | FLOAT | NULLABLE | Total number of people who completed the form on the given date |
+| d0_form_filled | FLOAT | NULLABLE | Number of people who signed up, initiated form fillup and also completed the form on the given date |
+| dplus_form_filled | FLOAT | NULLABLE | Number of people who completed the form on the given date but had signed up before the date |
+| d0_orders | FLOAT | NULLABLE | Number of people who signed up, initiated form fillup, completed the form and also ordered on the same date |
+| dplus_orders | FLOAT | NULLABLE | Number of people who ordered on the given date but had form signed up at least 1 day before |
+| d1_orders | FLOAT | NULLABLE | Number of people who ordered on the given date but had form signed up exactly 1 day before |
+| d7_orders | FLOAT | NULLABLE | Number of people who ordered on the given date but had form signed up exactly 7 days before |
+| d15_orders | FLOAT | NULLABLE | Number of people who ordered on the given date but had form signed up exactly 15 days before |
+| d21_orders | FLOAT | NULLABLE | Number of people who ordered on the given date but had form signed up exactly 21 days before |
+| d30_orders | FLOAT | NULLABLE | Number of people who ordered on the given date but had form signed up exactly 30 days before |
+| d30plus_orders | FLOAT | NULLABLE | Number of people who ordered on the given date but had form signed up more than 30 days before |
+| NF_orders | FLOAT | NULLABLE | Number of people who ordered on the given date without filling any form (No Form orders) |
+| order_utm_medium | STRING | NULLABLE | UTM medium parameter captured at the time of order placement |
+| order_utm_campaign | STRING | NULLABLE | UTM campaign parameter captured at the time of order placement |
+| order_utm_source | STRING | NULLABLE | UTM source parameter captured at the time of order placement |
+| age_bucket | STRING | NULLABLE | Age group bucket of the user (e.g., 18-25, 26-35, 36-45, etc.) |
+| d0_revenue | FLOAT | NULLABLE | Total revenue generated from d0 orders (orders placed on the same day as signup) |
