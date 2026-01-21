@@ -46,7 +46,6 @@ Refer to `schemas/d0_dplus_daily_summary.schema` for the complete schema. Key co
 
 The chatbot should:
 - Parse natural language questions
-- Query the JSON data dynamically
 - Perform aggregations, comparisons, and trend analysis
 - Return clear, formatted answers with relevant numbers
 
@@ -84,7 +83,7 @@ The chatbot should gracefully handle:
 
 ### 4. Technical Requirements
 
-- Use Python as the primary language
+- Use Python and SQL as the primary languages
 - Load and process the JSON data efficiently
 - Implement proper error handling
 - Structure code in a modular, maintainable way
