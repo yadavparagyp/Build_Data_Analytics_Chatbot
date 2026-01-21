@@ -36,9 +36,9 @@ Refer to `schemas/d0_dplus_daily_summary.schema` for the complete schema. Key co
 
 ### Key Business Metrics to Understand
 
-1. **D0 Conversion Rate** = `d0_orders / d0_form_filled` (People who ordered on the same day they filled the form)
-2. **Form Completion Rate** = `total_form_filled / total_form_start`
-3. **Overall Conversion Rate** = `(d0_orders + dplus_orders) / total_form_filled`
+1. **D0 Conversion Rate** = `Total D0 Orders / Total D0 Form Filled` (People who ordered on the same day they filled the form)
+2. **Dplus Conversion Rate** = `Total Dplus Orders / Total Dplus Form Filled` (People who ordered after the day they filled the form)
+3. **Form Completion Rate** = `total_form_filled / total_form_start`
 
 ## Requirements
 
