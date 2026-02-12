@@ -50,6 +50,7 @@ The chatbot should:
 - Perform aggregations, comparisons, trend analysis, and any other analytical operations supported by the data
 - Return clear, formatted answers with relevant numbers
 - Handle questions that go beyond the provided examples—the system should generalize, not memorize
+- **Maintain conversation context** and answer follow-up questions based on previous interactions (e.g., "What about for Mumbai?" after asking about Delhi's conversion rate)
 
 ### 2. Query Handling
 
@@ -110,7 +111,6 @@ The chatbot should gracefully handle:
 
 ### 5. Bonus Features (Optional)
 
-- Support follow-up questions with context
 - Generate simple visualizations (charts/graphs)
 - Export answers to a report format
 - Suggest related questions based on the current query
@@ -131,9 +131,10 @@ The chatbot should gracefully handle:
 
 1. **Accuracy** - Correct answers with proper calculations
 2. **Generalization** - Ability to handle **any** analytical query derivable from the data, not just predefined examples
-3. **Robustness** - Graceful handling of edge cases, ambiguous queries, and unsupported questions
-4. **Code Quality** - Clean, documented, modular code
-5. **User Experience** - Clear, well-formatted responses
-6. **Agentic Design** - Effective implementation of agentic AI patterns (planning, reasoning, tool use)
-7. **SQL Generation** - Quality and correctness of dynamically generated SQL queries for novel questions
-8. **LLM Integration** - Proper integration with open source models (Ollama/Hugging Face)
+3. **Context Awareness** - Ability to maintain conversation history and correctly interpret follow-up questions
+4. **Robustness** - Graceful handling of edge cases, ambiguous queries, and unsupported questions
+5. **Code Quality** - Clean, documented, modular code
+6. **User Experience** - Clear, well-formatted responses
+7. **Agentic Design** - Effective implementation of agentic AI patterns (planning, reasoning, tool use)
+8. **SQL Generation** - Quality and correctness of dynamically generated SQL queries for novel questions
+9. **LLM Integration** - Proper integration with open source models (Ollama/Hugging Face)
