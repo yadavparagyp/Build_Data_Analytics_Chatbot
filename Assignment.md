@@ -2,7 +2,7 @@
 
 ## Objective
 
-Build an intelligent chatbot that can answer analytical questions from the provided aggregated data of a hair care product company's registration-to-order funnel.
+Build an intelligent Agentic chatbot that can answer analytical questions from the provided aggregated data of a hair care product company's registration-to-order funnel.
 
 ## Context
 
@@ -45,13 +45,17 @@ Refer to `schemas/d0_dplus_daily_summary.schema` for the complete schema. Key co
 ### 1. Core Functionality
 
 The chatbot should:
-- Parse natural language questions
-- Perform aggregations, comparisons, and trend analysis
+- Parse **any** natural language analytical question about the data
+- Dynamically understand user intent and generate appropriate queries
+- Perform aggregations, comparisons, trend analysis, and any other analytical operations supported by the data
 - Return clear, formatted answers with relevant numbers
+- Handle questions that go beyond the provided examples—the system should generalize, not memorize
 
-### 2. Example Questions to Support
+### 2. Query Handling
 
-The chatbot should be able to answer questions like (but not limited to):
+**Important**: The chatbot must be capable of answering **any analytical question** that can be derived from the available data, not just the examples listed below. The examples are provided only to illustrate the types of analysis expected. Since you are implementing an Agentic AI with dynamic SQL generation, the system should generalize to handle novel queries that were not explicitly anticipated during development.
+
+The chatbot should be able to answer questions like:
 
 **Revenue Analysis:**
 1. What was the daily average revenue for the last week?
@@ -83,8 +87,24 @@ The chatbot should gracefully handle:
 
 ### 4. Technical Requirements
 
+- **Agentic AI Architecture**: Implement the chatbot using an Agentic AI approach where the agent can:
+  - Reason about the user's question
+  - Plan the steps needed to answer the query
+  - Execute actions (data retrieval, calculations)
+  - Reflect on results and refine if needed
+
+- **Dynamic SQL Generation**: The agent should dynamically generate SQL queries based on natural language input rather than using hardcoded query templates. The system should:
+  - Understand the data schema
+  - Generate appropriate SQL queries on-the-fly
+  - Handle complex aggregations and filters dynamically
+
+- **Open Source LLM Integration**: Use open source cloud-based models for the AI backbone:
+  - **Ollama Cloud**: Models like Llama, Mistral, or similar
+  - **Hugging Face Inference API**: Models available through Hugging Face's hosted inference endpoints
+  - Document which model(s) you chose and why
+
 - Use Python and SQL as the primary languages
-- Load and process the JSON data efficiently
+- Load and process the JSON data efficiently (consider using SQLite or DuckDB for SQL queries)
 - Implement proper error handling
 - Structure code in a modular, maintainable way
 
@@ -110,7 +130,10 @@ The chatbot should gracefully handle:
 ## Evaluation Criteria
 
 1. **Accuracy** - Correct answers with proper calculations
-2. **Coverage** - Ability to handle diverse question types
-3. **Robustness** - Graceful handling of edge cases
+2. **Generalization** - Ability to handle **any** analytical query derivable from the data, not just predefined examples
+3. **Robustness** - Graceful handling of edge cases, ambiguous queries, and unsupported questions
 4. **Code Quality** - Clean, documented, modular code
 5. **User Experience** - Clear, well-formatted responses
+6. **Agentic Design** - Effective implementation of agentic AI patterns (planning, reasoning, tool use)
+7. **SQL Generation** - Quality and correctness of dynamically generated SQL queries for novel questions
+8. **LLM Integration** - Proper integration with open source models (Ollama/Hugging Face)
