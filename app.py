@@ -6,7 +6,7 @@ from src.agent import AnalyticsAgent, ChatState
 from src.config import SETTINGS
 
 st.set_page_config(page_title="Funnel Analytics Chatbot", layout="wide")
-st.title("🧠 Funnel Analytics Chatbot (DuckDB + Ollama)")
+st.title("Funnel Analytics Chatbot (DuckDB + Ollama)")
 
 @st.cache_resource
 def boot():

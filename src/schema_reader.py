@@ -22,7 +22,7 @@ class TableSchema:
             lines.append(f"- {c.name} ({c.dtype}){desc}")
         return "\n".join(lines)
 
-    # ✅ MUST be inside the class
+    # MUST be inside the class
     def to_compact_prompt_text(self, important_only: bool = True) -> str:
         important = {
             "date","gender","platform","city","stage","age_bucket",
