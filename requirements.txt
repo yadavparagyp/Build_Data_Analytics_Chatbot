@@ -1,0 +1,7 @@
+duckdb==1.0.0
+pandas==2.2.2
+pyarrow==17.0.0
+streamlit==1.37.1
+requests==2.32.3
+python-dotenv==1.0.1
+sqlparse==0.5.1
